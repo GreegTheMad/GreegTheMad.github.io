@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me & Photo Gallery</title>
     <style>
+
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
             background-color: #000000;
             text-align: center;
             color: #ffffff;
@@ -15,27 +15,30 @@
         }
 
         h1 {
+            font-family: 'Daydream';
             text-align: center;
             color: #ffffff;
             text-shadow: 1px 1px 2px #ff0000;
-            font-size: 40px;
         }
-
+        
         h2 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             color: #ffffff;
             text-shadow: 1px 1px 2px #ff0000;
         }
 
         h3 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             color: #ffffff;
             text-shadow: 1px 1px 2px #ff0000;
         }
 
-        .about-section{
+        .about-section {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             font-size: 20px;
-            border: 3px double #ff0000;
+            border: 3px groove #ff0000;
             padding: 10px;
             margin-bottom: 10px;
             background-color: #333333;
@@ -43,7 +46,8 @@
         }
 
         .info-section {
-            border: 3px double #ff0000;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            border: 3px groove #ff0000;
             padding: 20px;
             margin-bottom: 20px;
             background-color: #333333;
@@ -72,29 +76,36 @@
         }
 
         footer {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             margin-top: 20px;
             font-size: 0.9em;
             color: #555;
         }
 
-         .link-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
+        .link-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
 
-.link-container a {
-    color: #0066cc;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
+        .link-container a {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #0066cc;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
 
-.link-container a:hover {
-    transform: scale(1.50);
-    text-decoration: underline;
-    color: #48004b;
-}
+        .link-container a:hover {
+            transform: scale(1.50);
+            text-decoration: underline;
+            color: #48004b;
+        }
+
+        @font-face { 
+            font-family: 'Daydream'; 
+            src: url(fonts/Daydream.ttf); } 
+
 
     </style>
 </head>
@@ -102,23 +113,21 @@
 <body>
     <h1>Le Epik Website</h1>
     <div class="about-section">
-        <p>This is a website of Jakub Dovala student of Educhem, not-so pro skater, unprofresional photographer and a weirdo </p>
+        <p>This is a website of Jakub Dovala, student of Educhem, not-so pro skater, unprofessional photographer, and a weirdo.</p>
     </div>
     
-        <h2>Links n Stuff</h2>
-        <div class="info-section">
+    <h2>Links n Stuff</h2>
+    <div class="info-section">
         <div class="link-container">
             <a href="https://steamcommunity.com/profiles/76561199131573374/" target="_blank">Steam</a>
             <a href="https://greeg-themadman.itch.io/" target="_blank">Itch.io</a>
             <a href="https://github.com/GreegTheMad" target="_blank">Github</a>
-            <a href="https://www.youtube.com/@GreegCZ" target="_blank">Youtube</a>
+            <a href="https://www.youtube.com/@GreegCZ" target="_blank">YouTube</a>
+        </div>
     </div>
-    </div>
-
 
     <h2>Photo Gallery</h2>
-<div class="gallery">
-
+    <div class="gallery">
     <picture>
         <source srcset="galerie/photo001.jpg" type="image/jpg">
         <img src="nahradnigif/tumblr_m1161xnpu31r4bvmho1_500.gif">
@@ -209,7 +218,7 @@
         <img src="nahradnigif/tumblr_m1161xnpu31r4bvmho1_500.gif">
     </picture>
 
-</div>
+    </div>
 
     <footer>
         &copy; 2024 Website owner Jakub Dovala. Please dont steal shit.
