@@ -28,13 +28,6 @@
             text-shadow: 1px 1px 2px #ff0000;
         }
 
-        h3 {
-            font-family: 'Daydream';
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 1px 1px 2px #ff0000;
-        }
-
         .about-section {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             font-size: 20px;
@@ -47,7 +40,6 @@
 
         .info-section {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            border: 3px groove #ff0000;
             padding: 20px;
             margin-bottom: 20px;
             background-color: #333333;
@@ -93,32 +85,19 @@
         }
 
         .link-container a {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Molot'; 
+            font-size: 20px;
             color: #0066cc;
             text-decoration: none;
             transition: transform 0.2s;
         }
 
         .link-container a:hover {
+            font-family: 'Chernobyl'; 
             transform: scale(1.50);
-            text-decoration: underline;
+            text-decoration:underline;
             color: #48004b;
         }
-
-        @font-face { 
-            font-family: 'Daydream'; 
-            src: url(fonts/Daydream.ttf); 
-        } 
-
-        @font-face { 
-            font-family: 'Digital-7'; 
-            src: url(fonts/digital-7.ttf); 
-        } 
-
-        @font-face { 
-            font-family: 'HalfLife'; 
-            src: url(fonts/HalfLife.ttf); 
-        } 
 
         #clock {
             font-family: 'Digital-7'; 
@@ -131,6 +110,26 @@
             font-size: 60px;
             margin-top: 10px;
         }
+        
+        @font-face { 
+            font-family: 'Daydream'; 
+            src: url(fonts/Daydream.ttf); 
+        } 
+
+        @font-face { 
+            font-family: 'Digital-7'; 
+            src: url(fonts/digital-7.ttf); 
+        } 
+
+        @font-face { 
+            font-family: 'Chernobyl'; 
+            src: url(fonts/Chernobyl.otf); 
+        } 
+
+        @font-face { 
+            font-family: 'Molot'; 
+            src: url(fonts/Molot.otf); 
+        } 
 
     </style>
 </head>
@@ -141,16 +140,6 @@
         <p>This is a website of Jakub Dovala, student of Educhem, not-so pro skater, unprofessional photographer, and a weirdo.</p>
     </div>
     
-    <h2>Links n Stuff</h2>
-    <div class="info-section">
-        <div class="link-container">
-            <a href="https://steamcommunity.com/profiles/76561199131573374/" target="_blank">Steam</a>
-            <a href="https://greeg-themadman.itch.io/" target="_blank">Itch.io</a>
-            <a href="https://github.com/GreegTheMad" target="_blank">Github</a>
-            <a href="https://www.youtube.com/@GreegCZ" target="_blank">YouTube</a>
-        </div>
-    </div>
-
     <h2>Photo Gallery</h2>
     <div class="gallery">
     <picture>
@@ -244,6 +233,16 @@
     </picture>
 
     </div>
+
+    <div class="info-section">
+        <div class="link-container">
+            <a href="https://steamcommunity.com/profiles/76561199131573374/" target="_blank">Steam</a>
+            <a href="https://greeg-themadman.itch.io/" target="_blank">Itch.io</a>
+            <a href="https://github.com/GreegTheMad" target="_blank">Github</a>
+            <a href="https://www.youtube.com/@GreegCZ" target="_blank">YouTube</a>
+        </div>
+    </div>
+
 
     <div id="date">00/00/0000</div>
     <div id="clock">00:00:00</div>
