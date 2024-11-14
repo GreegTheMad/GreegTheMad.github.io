@@ -22,14 +22,14 @@
         }
         
         h2 {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Daydream';
             text-align: center;
             color: #ffffff;
             text-shadow: 1px 1px 2px #ff0000;
         }
 
         h3 {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Daydream';
             text-align: center;
             color: #ffffff;
             text-shadow: 1px 1px 2px #ff0000;
@@ -60,8 +60,11 @@
             margin-bottom: 20px;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 15px;
-            background-image: url(https://as2.ftcdn.net/v2/jpg/00/38/09/19/1000_F_38091957_jYcFRja0hUav8KNAPks62eWL7tUlV425.jpg)
-        }
+            background-image: url('https://as2.ftcdn.net/v2/jpg/00/38/09/19/1000_F_38091957_jYcFRja0hUav8KNAPks62eWL7tUlV425.jpg');
+            background-size: repeat;
+            border: 15px solid transparent;
+            border-image: url('https://t4.ftcdn.net/jpg/03/54/82/47/240_F_354824710_U9An6vjMbMXfm3cjHbAPeXuC68H2nyH7.jpg') 30 stretch;
+}
 
         .gallery img {
             width: 100%;
@@ -104,14 +107,36 @@
 
         @font-face { 
             font-family: 'Daydream'; 
-            src: url(fonts/Daydream.ttf); } 
+            src: url(fonts/Daydream.ttf); 
+        } 
 
+        @font-face { 
+            font-family: 'Digital-7'; 
+            src: url(fonts/digital-7.ttf); 
+        } 
+
+        @font-face { 
+            font-family: 'HalfLife'; 
+            src: url(fonts/HalfLife.ttf); 
+        } 
+
+        #clock {
+            font-family: 'Digital-7'; 
+            font-size: 60px;
+            margin-top: 10px;
+        }
+
+        #date {
+            font-family: 'Digital-7'; 
+            font-size: 60px;
+            margin-top: 10px;
+        }
 
     </style>
 </head>
 
 <body>
-    <h1>Le Epik Website</h1>
+    <h1>Le Epic Website</h1>
     <div class="about-section">
         <p>This is a website of Jakub Dovala, student of Educhem, not-so pro skater, unprofessional photographer, and a weirdo.</p>
     </div>
@@ -219,6 +244,28 @@
     </picture>
 
     </div>
+
+    <div id="date">00/00/0000</div>
+    <div id="clock">00:00:00</div>
+    
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const year = now.getFullYear();
+    
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('date').textContent = `${day}/${month}/${year}`;
+        }
+    
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to display the time and date immediately
+    </script>
 
     <footer>
         &copy; 2024 Website owner Jakub Dovala. Please dont steal shit.
