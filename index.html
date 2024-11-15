@@ -119,10 +119,17 @@
             src: url(fonts/Molot.otf); 
         } 
 
-        #clock, #date {
+        #date {
             font-family: 'Digital-7'; 
             font-size: 60px;
-            margin-top: 10px;
+            margin-top: 21px;
+        }
+
+        #clock {
+            font-family: 'Digital-7'; 
+            font-size: 60px;
+            margin-top: 25px;
+            margin-bottom: 25px;
         }
 
         .button-container {
@@ -132,13 +139,33 @@
 
         .button-container img {
             cursor: pointer;
-            width: 100px; /* Adjust size as needed */
+            width: 100px; 
             transition: transform 0.2s;
         }
 
         .button-container img:hover {
             transform: scale(1.1);
         }
+        
+        #videoContainer {
+            display: none;
+        }
+
+        #videoElement {
+            width: 300px;
+            height: auto;
+        }
+
+        .info-selfdestruct-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .info-selfdestruct img {
+            width: 500px; 
+            transition: transform 0.2s;
+        }
+
     </style>
 </head>
 
@@ -251,71 +278,85 @@
         </div>
     </div>
 
+    <div class="info-selfdestruct">
+        <img src="images/Nostromo_Self_Destruct.jpg" alt="Instaction" id="idn">
+    </div>
 
     <div id="date">00/00/0000</div>
     <div id="clock">00:00:00</div>
-
-    <div class="button-container">
-        <img src="images/The-Autodestruct-Panel-in-Alien-1979.png" alt="Start Countdown" id="countdownButton">
+    
+    <div id="videoContainer">
+        <video id="videoElement" src="videos/NostromoSelfDestruct.mp4" controls autoplay></video>
     </div>
-
-    <audio id="countdownSound" src="sounds/Nastromo.mp3"></audio>
-
+    
+    <div class="button-container">
+        <img src="images/The-Autodestruct-Panel-in-Alien-1979.png" alt="Start Video" id="videoButton">
+    </div>
+    
     <script>
-
-let countdownActive = false;
-let countdownTime = 765;
-let countdownInterval;
-
-document.getElementById('countdownButton').addEventListener('click', function() {
-    if (!countdownActive) {
-        countdownActive = true;
-        clearInterval(countdownInterval);
-        startCountdown();
-        const countdownSound = document.getElementById('countdownSound');
-        if (countdownSound.paused) {
-            countdownSound.play().catch((error) => {
-                console.error('Audio playback error:', error);
-                alert('Audio playback failed. Check if your browser settings allow audio playback.');
-            });
+        const videoButton = document.getElementById('videoButton');
+        const videoContainer = document.getElementById('videoContainer');
+        const videoElement = document.getElementById('videoElement');
+        const clock = document.getElementById('clock');
+        const date = document.getElementById('date');
+        
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+        
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+            date.textContent = `${day}/${month}/${year}`;
         }
-    }
-});
+    
+        videoElement.style.pointerEvents = 'none';
+        document.addEventListener('keydown', (event) => {
+            const videoKeys = [' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+            if (videoKeys.includes(event.key)) {
+                event.preventDefault();
+            }
+        });
+    
+        setInterval(updateClock, 1000);
+        updateClock();
+    
+        videoButton.addEventListener('click', () => {
+            if (videoContainer.style.display === 'block') {
+                if (videoElement.currentTime < 358) {
+                    videoElement.pause();
+                    videoElement.currentTime = 0;
+                    videoContainer.style.display = 'none';
+                    clock.style.display = 'block';
+                    date.style.display = 'block';
+                } else {
+                    alert('You cant turn back now!');
+                }
+            } else {
+                clock.style.display = 'none';
+                date.style.display = 'none';
+                videoContainer.style.display = 'block';
+                videoElement.play();
+            }
+        });
+    
+        videoElement.addEventListener('ended', () => {
+            videoContainer.style.display = 'none';
+            clock.style.display = 'block';
+            date.style.display = 'block';
+        });
+    </script>
 
-function startCountdown() {
-    countdownInterval = setInterval(() => {
-        if (countdownTime >= 0) {
-            const minutes = Math.floor(countdownTime / 60);
-            const seconds = countdownTime % 60;
-            document.getElementById('clock').textContent = `00:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-            countdownTime--;
-        } else {
-            clearInterval(countdownInterval);
-            countdownActive = false;
-            countdownTime = 765;
-        }
-    }, 1000);
-}
+    <footer>
+        &copy; 2024 Website owner Jakub Dovala. Please don't steal stuff.
+    </footer>
+</body>
+</html>
 
-function updateClock() {
-    if (!countdownActive) {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
-
-        const day = String(now.getDate()).padStart(2, '0');
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const year = now.getFullYear();
-
-        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        document.getElementById('date').textContent = `${day}/${month}/${year}`;
-    }
-}
-
-setInterval(updateClock, 1000);
-updateClock();
-</script>
 
     <footer>
         &copy; 2024 Website owner Jakub Dovala. Please don't steal stuff.
