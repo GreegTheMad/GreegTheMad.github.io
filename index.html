@@ -56,7 +56,7 @@
             background-size: repeat;
             border: 15px solid transparent;
             border-image: url('https://t4.ftcdn.net/jpg/03/54/82/47/240_F_354824710_U9An6vjMbMXfm3cjHbAPeXuC68H2nyH7.jpg') 30 stretch;
-}
+        }
 
         .gallery img {
             width: 100%;
@@ -165,6 +165,27 @@
             width: 500px; 
             transition: transform 0.2s;
         }
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(85, 85, 85); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
 
     </style>
 </head>
@@ -174,7 +195,7 @@
     <div class="about-section">
         <p>This is a website of Jakub Dovala, student of Educhem, not-so pro skater, unprofessional photographer, and a weirdo.</p>
     </div>
-    
+
     <h2>Photo Gallery</h2>
     <div class="gallery">
         
@@ -295,6 +316,7 @@
     </div>
     
     <script>
+
         const videoButton = document.getElementById('videoButton');
         const videoContainer = document.getElementById('videoContainer');
         const videoElement = document.getElementById('videoElement');
@@ -350,11 +372,13 @@
             clock.style.display = 'block';
             date.style.display = 'block';
         });
+        
     </script>
 
     <footer>
         &copy; 2024 Website owner Jakub Dovala. Please don't steal stuff.
     </footer>
+    
 </body>
 </html>
 
