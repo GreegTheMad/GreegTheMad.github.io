@@ -172,14 +172,14 @@ footer {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255); 
+    background: rgb(255, 0, 0); 
     border-radius: 10px;
-    box-shadow: inset 0 0 5px rgb(255, 0, 0);
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #cccccc; 
-    box-shadow: inset 0 0 5px rgb(255, 0, 0);
+    background: #9d0000; 
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
 
   }
