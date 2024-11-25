@@ -8,7 +8,10 @@
 </head>
 
 <body>
+    <button onclick="lightmode()">Toggle light mode</button>
+    
     <h1>Le Epic Website</h1>
+
     <div class="about-section">
         <p>This is a website of Jakub Dovala, student of Educhem, not-so pro skater, unprofessional photographer, and a weirdo.</p>
     </div>
@@ -234,7 +237,11 @@
             clock.style.display = 'block';
             date.style.display = 'block';
         });
-        
+
+        function lightmode() {
+   var element = document.body;
+   element.classList.toggle("light-mode");
+}
     </script>
 
     <footer>
