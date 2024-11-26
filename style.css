@@ -39,6 +39,69 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.switch {
+    position: relative; /* Remove fixed positioning */
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Default: align lever to the left */
+    transition: background-color 0.3s;
+    margin-left: auto; /* Push the switch to the right inside a container */
+}
+
+/* Lever (toggle circle) */
+.switch .lever {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sun and Moon Icons */
+.lever img {
+    position: absolute;
+    width: 16px; /* Adjust size */
+    height: 16px;
+    transition: opacity 0.3s;
+}
+
+/* Default visibility */
+.sun-icon {
+    opacity: 0; /* Visible in light mode */
+}
+
+.moon-icon {
+    opacity: 1; /* Hidden in light mode */
+}
+
+/* Active state for the switch */
+.switch.active {
+    background-color: #000000;
+}
+
+.switch.active .lever {
+    transform: translateX(30px); /* Slide lever to the right */
+}
+
+.switch.active .sun-icon {
+    opacity: 1; /* Hide sun icon */
+}
+
+.switch.active .moon-icon {
+    opacity: 0; /* Show moon icon */
+}
+
 
 h1 {
     font-family: 'Daydream';
@@ -217,3 +280,5 @@ footer {
     box-shadow: inset 0 0 5px rgb(255, 255, 255);
 
   }
+
+  
