@@ -3,6 +3,7 @@ const videoContainer = document.getElementById('videoContainer');
 const videoElement = document.getElementById('videoElement');
 const clock = document.getElementById('clock');
 const date = document.getElementById('date');
+const lightModeSwitch = document.getElementById('lightModeSwitch');
 
 function updateClock() {
     const now = new Date();
@@ -53,8 +54,6 @@ videoElement.addEventListener('ended', () => {
     clock.style.display = 'block';
     date.style.display = 'block';
 });
-
-const lightModeSwitch = document.getElementById('lightModeSwitch');
 
 lightModeSwitch.addEventListener('click', () => {
 // Toggle light mode on the body
