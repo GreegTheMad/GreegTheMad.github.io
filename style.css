@@ -132,7 +132,7 @@ h2 {
     padding: 20px;
     border: 3px groove #ff0000;
     margin-bottom: 20px;
-    background-color: #333333;
+    background-image: url('https://img.freepik.com/free-vector/digital-technology-polygon-connection-background_1035-17976.jpg?t=st=1732866950~exp=1732870550~hmac=c2ce97c3df2ffdc845c5bd5e442803c8cc47f12e2d0df55d8c849d4a3da87235&w=996');
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -184,7 +184,7 @@ footer {
 
 .link-container a:hover {
     font-family: 'Chernobyl'; 
-    transform: scale(1.50);
+    transform: scale(1.20);
     text-decoration:underline;
     color: #48004b;
 }
