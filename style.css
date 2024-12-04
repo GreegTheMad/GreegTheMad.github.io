@@ -39,6 +39,17 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.light-mode .repository-container {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 20px;
+    border: 3px groove #0015ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #c0c0c0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
 .switch {
     position: relative; /* Remove fixed positioning */
     width: 60px;
@@ -118,6 +129,16 @@ h2 {
 }
 
 .about-section {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 20px;
+    border: 3px groove #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333333;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.repository-container {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 20px;
     border: 3px groove #ff0000;

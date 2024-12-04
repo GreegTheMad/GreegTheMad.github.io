@@ -62,3 +62,5 @@ document.body.classList.toggle('light-mode');
 // Toggle the switch appearance
 lightModeSwitch.classList.toggle('active');
 });
+
+
