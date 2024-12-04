@@ -205,7 +205,26 @@ footer {
 
 .link-container a:hover {
     font-family: 'Chernobyl'; 
-    transform: scale(1.20);
+    transform: scale(1.2);
+    text-decoration:underline;
+    color: #48004b;
+    
+}.repository-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.repository-container a {
+    font-family: 'Molot'; 
+    font-size: 20px;
+    color: #0066cc;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.repository-container a:hover {
+    transform: scale(1.1);
     text-decoration:underline;
     color: #48004b;
 }
@@ -230,53 +249,6 @@ footer {
     src: url(fonts/Molot.otf); 
 } 
 
-#date {
-    font-family: 'Digital-7'; 
-    font-size: 60px;
-    margin-top: 21px;
-}
-
-#clock {
-    font-family: 'Digital-7'; 
-    font-size: 60px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.button-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.button-container img {
-    cursor: pointer;
-    width: 100px; 
-    transition: transform 0.2s;
-}
-
-.button-container img:hover {
-    transform: scale(1.1);
-}
-
-#videoContainer {
-    display: none;
-}
-
-#videoElement {
-    width: 300px;
-    height: auto;
-}
-
-.info-selfdestruct-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.info-selfdestruct img {
-    width: 500px; 
-    transition: transform 0.2s;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
@@ -299,24 +271,4 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: #9d0000; 
     box-shadow: inset 0 0 5px rgb(255, 255, 255);
-}
-
-.repository-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.repository-container a {
-    font-family: 'Molot'; 
-    font-size: 20px;
-    color: #0066cc;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
-
-.repository-container a:hover {
-    transform: scale(1.20);
-    text-decoration:underline;
-    color: #48004b;
 }
