@@ -42,15 +42,15 @@ h1, h2 {
 }
 .light-mode h1, .light-mode h2, .light-mode h3 {
     color: #ffffff;
-    text-shadow: 1px 1px 2px #000000;
+    text-shadow: 5px 5px 7px #000000;
 }
 .light-mode .about-section,
 .light-mode .info-section,
 .light-mode .repository-container {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 20px;
-    border: 3px groove #0015ff;
-    background-color: #c0c0c0;
+    border: 3px groove #000000;
+    background-color: #ffffff;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 .light-mode .about-section {
