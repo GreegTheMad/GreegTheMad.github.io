@@ -35,14 +35,14 @@ h1, h2 {
 
 /* Light Mode */
 .light-mode {
-    background-color: #ffffff;
+    background-color: #cc0000;
     color: #000000;
     margin: 0;
     padding: 20px;
 }
 .light-mode h1, .light-mode h2, .light-mode h3 {
-    color: #000000;
-    text-shadow: 1px 1px 2px #0015ff;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
 }
 .light-mode .about-section,
 .light-mode .info-section,
